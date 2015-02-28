@@ -36,3 +36,7 @@ Since EdgeConvert is a fairly simple application with specific and well defined 
 
 We were able to keep the help system in-app by inserting a JavaFX scene onto a swing component and loading the web page from within one of the application’s packages. This would allow updates to the help system to be completed while updating the application itself. Furthermore additions to the help system are in a language and format that most developers know off hand, making it easier to add new processes to the user-guide.
 
+## Team Members
+
+- Wyatt McBain
+- David Crocker
