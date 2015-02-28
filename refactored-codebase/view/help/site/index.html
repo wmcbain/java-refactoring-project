@@ -1,0 +1,368 @@
+<html>
+  <head>
+    <title>Edge Convert Help System</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+
+        <div class="navbar-header">
+          <p class="navbar-brand">
+            Help Desk
+          </p>
+        </div>
+
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+
+      <div class="col-xs-12">
+
+        <div role="tabpanel">
+          <ul class="nav nav-tabs" role="tablist">
+
+            <li role="presentation" class="active">
+              <a href="#getting-started" aria-controls="getting-started" role="tab" data-toggle="tab">Getting Started</a>
+            </li>
+
+            <li role="presentation">
+              <a href="#opening" aria-controls="opening" role="tab" data-toggle="tab">Opening Files</a>
+            </li>
+
+            <li role="presentation">
+              <a href="#define-tables" aria-controls="define-tables" role="tab" data-toggle="tab">Define Tables</a>
+            </li>
+
+            <li role="presentation">
+              <a href="#define-rel" aria-controls="define-rel" role="tab" data-toggle="tab">Relationships</a>
+            </li>
+
+            <li role="presentation">
+              <a href="#save" aria-controls="save" role="tab" data-toggle="tab">Saving Files</a>
+            </li>
+
+            <li role="presentation">
+              <a href="#add-features" aria-controls="add-features" role="tab" data-toggle="tab">Add Features</a>
+            </li>
+
+          </ul>
+
+          <div style="height:20px;"></div> <!-- Have to have empty div instead of styles -->
+
+          <div class="tab-content">
+
+            <div role="tabpanel" class="tab-pane fade in active" id="getting-started">
+              <div class="row col-xs-12">
+                <p>EdgeConvert is a Java application that can read in different file types, read their schema, and then output the schema into the format of the user's choosing. EdgeConvert is also very flexible and allows the addition of new formats. Please see the <a onclick="showTab('#add-features')">Add Features</a> section for more info.</p>
+              </div>
+
+              <div class="row col-xs-12">
+                <h3>Get started</h3>
+                <ul>
+                  <li>
+                    <p>
+                      <a onclick="showTab('#opening')">Open Files</a> - Open a file to load the schema
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a onclick="showTab('#define-tables')">Define Tables</a> - Edit tables and fields
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a onclick="showTab('#define-rel')">Define Relationships</a> - Edit relationships amongst the tables
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a onclick="showTab('#save')">Save</a> - Output to the file type of your choice
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a onclick="showTab('#add-features')">Add Features</a> - Adding features to EdgeConvert
+                    </p>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+            <div role="tabpanel" class="tab-pane fade" id="opening">
+              <h3>How to Open Files</h3>
+
+              <div class="row col-xs-12">
+                <div style="height:20px;"></div>
+                <div class="col-xs-7">
+                  <img src="images/open.jpg" class="img-rounded img-responsive" alt="Open File">
+                </div>
+                <div class="col-xs-5">
+                  <h4>1. Opening the file</h4>
+                  <ul>
+                    <li>
+                      Select "File" from the top menu bar"
+                    </li>
+                    <li>
+                      To open one of the file types in the plug-in directory click "Open"
+                      <ul>
+                        <li>
+                          Then choose one of the file types from the child menu
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      Or click "Open Save File" to open a file saved by edge convert.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="row col-xs-12">
+                <div style="height:40px;"></div>
+                <div class="col-xs-7">
+                  <img src="images/openprompt.jpg" class="img-rounded img-responsive" alt="Open File">
+                </div>
+                <div class="col-xs-5">
+                  <h4>2. Select and open</h4>
+                  <ul>
+                    <li>
+                      You will be prompted to select the file of the file type you selected.
+                    </li>
+                    <li>
+                      Select file and click "Open"
+                    </li>
+                    <li>
+                      To cancel click "Cancel"
+                    </li>
+                    <li>
+                      After opening the file you will be ready to <a onclick="showTab('#define-tables')">define your tables</a>.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+
+            <div role="tabpanel" class="tab-pane fade" id="define-tables">
+              <h3>Defining Tables</h3>
+
+              <div class="row col-xs-12">
+                <div style="height:20px;"></div>
+                <div class="col-xs-7">
+                  <img src="images/deftables.jpg" class="img-rounded img-responsive" alt="Define Tables" style="padding-top:50px;">
+                </div>
+                <div class="col-xs-5">
+                  <h4>1. Selecting tables and fields</h4>
+                  <ul>
+                    <li>
+                      Once you have <a onclick="showTab('#opening')">opening a file</a>, you can define your fields in your table
+                    </li>
+                    <li>
+                      To show fields, select a table under "All Tables"
+                    </li>
+                    <li>
+                      To begin defining a field select one from under the "Field List"
+                      <ul>
+                        <li>
+                          You may also use the up and down arrows to the right to move through the list
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      You may then begin defining the field's properties
+                      <ul>
+                        <li>
+                          By selecting type from the radio buttons
+                        </li>
+                        <li>
+                          By defining if it is a primary key, allows a null value, or should increment automatically
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="row col-xs-12">
+                <div style="height:50px;"></div>
+                <div class="col-xs-4 col-xs-offset-3">
+                  <img src="images/varlength.jpg" class="img-rounded img-responsive" alt="Prompt">
+                  <img src="images/defvalue.jpg" class="img-rounded img-responsive" alt="Prompt" style="padding-top:20px;">
+                </div>
+                <div class="col-xs-5">
+                  <h4>2. Setting lengths and defaults</h4>
+                  <ul>
+                    <li>
+                      Set the length of varchar and char types by clicking on "Set Char Length"
+                      <ul>
+                        <li>
+                          Prompt shown below
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      Set the default value of a type by clicking on "Set Default Value"
+                      <ul>
+                        <li>
+                          Prompt shown below
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+
+            <div role="tabpanel" class="tab-pane fade" id="define-rel">
+              <h3>Defining Relationships</h3>
+
+              <div class="row col-xs-12">
+                <div style="height:20px;"></div>
+                <div class="col-xs-5">
+                  <img src="images/defrelations.jpg" class="img-rounded img-responsive" alt="Define Relations">
+                </div>
+                <div class="col-xs-7">
+                  <h4>1. Defining relationships</h4>
+                  <ul>
+                    <li>
+                      To begin defining relations select "Define Relations" on the table GUI
+                    </li>
+                    <li>
+                      To define a relation:
+                      <ul>
+                        <li>
+                          Select a table under "Tables With Relations"
+                        </li>
+                        <li>
+                          Select a table under "Related Tables"
+                        </li>
+                        <li>
+                          Select the fields you would like to bind or unbind a relationship from "Fields in Tables with Relations" and "Fields in Related Tables"
+                        </li>
+                        <li>
+                          Once your GUI appears like the image to the left, select "Bind/Unbind Relation" to bind or unbind the relation.
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      To get back to defining tables select "Define Tables"
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="row col-xs-12">
+                <div style="height:40px;"></div>
+                <div class="col-xs-12">
+                  <h4>2. Notes on bind/unbind</h4>
+                  <ul>
+                    <li>
+                      If the data types do not match you will not be able to bind the relation
+                    </li>
+                    <li>
+                      If the selected table does not have any foreign keys, all fields will appear in the "Fields in Tables with Relations" list box.
+                    </li>
+                    <li>
+                      If two fields are bound or unbound, you will be notified with a prompt.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div role="tabpanel" class="tab-pane fade" id="save">
+              <h3>Saving Files</h3>
+
+              <div class="row col-xs-12">
+                <div style="height:20px;"></div>
+                <div class="col-xs-6">
+                  <img src="images/createddl.jpg" class="img-rounded img-responsive" alt="Create DDL">
+                  <img src="images/createddlprompt.jpg" class="img-rounded img-responsive" alt="Create DDL" style="padding-top:20px;">
+                  <img src="images/ddlopen.jpg" class="img-rounded img-responsive" alt="Create DDL" style="padding-top:20px;">
+                  <img src="images/savedsuc.jpg" class="img-rounded img-responsive" alt="Create DDL" style="padding-top:20px;">
+                </div>
+                <div class="col-xs-6">
+                  <h4>1. Saving a file</h4>
+                  <ul>
+                    <li>
+                      To save a file select "Create DDL" in either the Define Tables or Define Relations view.
+                    </li>
+                    <li>
+                      You will then be prompted to select the file type you'd like to save the file in.
+                    </li>
+                    <li>
+                      Then select the directory and declare the file name for your file without the extension.
+                    </li>
+                    <li>
+                      Finally you will click "Save" to save the file.
+                    </li>
+                    <li>
+                      You will be prompted on the file saving success or failure.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+
+            <div role="tabpanel" class="tab-pane fade" id="add-features">
+
+              <div class="row col-xs-12">
+                <p>EdgeConvert is a very flexible program and allows developers to add their own file types to the application so they may parse and/or save files in the file types they desire.</p>
+              </div>
+
+              <div class="row col-xs-12">
+                <div style="height:20px;"></div>
+                <div class="col-xs-7">
+                  <img src="images/defplugin.jpg" class="img-rounded img-responsive" alt="Plugins" style="padding-top:50px;">
+                </div>
+                <div class="col-xs-5">
+                  <h4>1. Selecting your own plugin directory</h4>
+                  <ul>
+                    <li>
+                      You may select your own directory of plugins by select "Options" from the top menu and then selecting "Set Plugin Directory"
+                    </li>
+                    <li>
+                      This will then be followed by a dialog where you will be able to select the directory of plug-ins.
+                    </li>
+                    <li>
+                      This choice is better suited for developers who would like to temporarily use plug-ins not included with the application.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="row col-xs-12" style="padding-top:40px;">
+                <h3>2. Other options</h3>
+                <ul>
+                  <li>
+                    You may also add plug-ins on a more permanent basis to the application.
+                  </li>
+                  <li>
+                    To do so add your plug-ins in the plugin directory in the install location of the applications jar.
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row col-xs-12" style="height:50px;"></div>
+    <script>
+      var showTab = function(tab) {
+        $('.nav-tabs a[href=' +tab+ ']').tab('show');
+      }
+    </script>
+  </body>
+</html>
